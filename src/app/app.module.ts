@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './modules/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 

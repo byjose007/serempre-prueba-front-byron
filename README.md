@@ -12,10 +12,8 @@
 ![alt text](https://github.com/byjose007/serempre-prueba-front-byron/blob/master/src/assets/img/capturaEstructura.png?raw=true)
 
 ## URL Proyeto
+[https://serempre-prueba-front-byron.vercel.app/](https://serempre-prueba-front-byron.vercel.app/)
 
-``` 
-$ https://serempre-prueba-front-byron.vercel.app/home
-```
 
 ## Development server
 
