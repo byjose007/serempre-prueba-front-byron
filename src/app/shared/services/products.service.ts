@@ -165,12 +165,9 @@ export class ProductsService {
 
   getProducts() {
     return this.firestore.collection('products').get();
-  
   }
 
   selectOption(option: any, category: number) {
-    console.log(this.products);
-
     for (let opt in this.products.options[category]['options']) {
       this.products.options[category]['options'][opt].selected = false;
     }
@@ -187,7 +184,6 @@ export class ProductsService {
     let addedCost = 0;
     for (let category in this.products.options) {
       for (let option of this.products.options[category]['options']) {
-        console.log(option, 'option');
         if (option.addedCost && option.selected) {
           addedCost += option.addedCost;
         }

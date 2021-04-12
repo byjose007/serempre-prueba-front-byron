@@ -9,12 +9,12 @@
 
 ## Estructura
 
-![alt text](https://github.com/byjose007/prueba_gazelook/blob/master/backend/uploads/diagrama.png?raw=true)
+![alt text](https://github.com/byjose007/serempre-prueba-front-byron/blob/master/src/assets/img/capturaEstructura.png?raw=true)
 
 ## URL Proyeto
 
 ``` 
-$ http://localhost:5000/api/documentation/
+$ https://serempre-prueba-front-byron.vercel.app/home
 ```
 
 ## Development server

@@ -21,7 +21,7 @@ export class ProductsComponent implements OnInit {
       this.products = this.products[0];
       this.productsService.setProducts(this.products) 
       this.productsService.setPrice(this.products.price); 
-      console.log(this.products, 'productros');
+     
     });
   }
 }

@@ -22,10 +22,7 @@ export class FeaturesComponent implements OnInit {
 
   constructor(private productsService: ProductsService) {}
 
-  ngOnInit(): void {
-
-
-  }
+  ngOnInit(): void {}
 
   selectTab(index: number) {
     this.activeTab = index;
