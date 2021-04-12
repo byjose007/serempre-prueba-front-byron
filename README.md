@@ -1,6 +1,21 @@
 # SeremprePruebaFrontByron
+## Tecnologías:
+- TypeScript
+- Angular 11.
+- Vercel
+- FireStorage Database
+- firebase Storage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+
+## Estructura
+
+![alt text](https://github.com/byjose007/prueba_gazelook/blob/master/backend/uploads/diagrama.png?raw=true)
+
+## URL Proyeto
+
+``` 
+$ http://localhost:5000/api/documentation/
+```
 
 ## Development server
 
@@ -25,3 +40,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## dependencias
+firebase

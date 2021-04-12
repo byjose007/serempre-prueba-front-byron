@@ -1,0 +1,69 @@
+<div *ngIf="product" class="product-overview">
+  <div class="product-tag">{{ product.badge }}</div>
+  <h1 class="product-title">{{ product.title }}</h1>
+  <h2 class="product-subtitle">{{ product.subtitle }}</h2>
+
+  <div class="product-price">
+    <div class="product-price-label">STARTING AT</div>
+    <div class="product-price-tag">
+      {{ product.currency }} {{ product.price }}
+    </div>
+  </div>
+
+  <div class="product-tabs">
+    <div
+      class="product-tabs-titles"
+      *ngFor="let tab of product.tabsInformation; let i = index"
+      (click)="selectTab(i)"
+      [ngClass]="{ active: i === activeTab }"
+      tabindex="0"
+    >
+      {{ tab.title }}
+    </div>
+    <div
+      class="product-tabs-content"
+      *ngFor="let tab of product.tabsInformation; let i = index"
+      [ngClass]="{ active: i === activeTab }"
+    >
+      {{ tab.description }}
+    </div>
+  </div>
+
+  <app-options-slides [optionsSlides]="product.featuresImages"></app-options-slides>
+
+  <div class="product-options">
+    <div
+      class="category"
+      *ngFor="let category of product.options; let catIndex = index"
+    >
+      <h4>{{ category.label }}</h4>
+      <div class="layout" [ngClass]="category.layout">
+        <div
+          class="option"
+          *ngFor="let option of category.options; let i = index"
+          (click)="selectOption(i, catIndex)"
+          [ngClass]="{ selected: option.selected === true }"
+          tabindex="0"
+        >
+          <div class="text">
+            <div class="option-title">{{ option.title }}</div>
+            <div class="option-desc">{{ option.desc }}</div>
+          </div>
+          <div class="added-price" *ngIf="option.addedCost !== undefined">
+            + {{ productPriceCurrency }}{{ option.addedCost }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-spec">
+    <div class="row">
+      <h4>Specifications.</h4>
+    </div>
+    <div class="row" *ngFor="let specification of product.specifications">
+      <div class="title">{{ specification.title }}</div>
+      <div class="desc">{{ specification.description }}</div>
+    </div>
+  </div>
+</div>

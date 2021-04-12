@@ -1,0 +1,18 @@
+<div  class="product-gallery">
+  <div *ngIf=" sliderImages " class="main-image">
+    <img src="{{ selectedImage }}" />
+  </div>
+  <div class="slider">
+    <div
+      class="image-slide"
+      *ngFor="let slide of sliderImages; let i = index"
+      (click)="changeImage(i)"
+      [ngClass]="{ active: i === selected }"
+      tabindex="0"
+    >
+      <img src="{{ slide.thumbnail }}" />
+    </div>
+  </div>
+</div>
+
+

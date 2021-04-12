@@ -1,0 +1,170 @@
+@import "../../../../styles.scss";
+
+
+
+
+
+footer {
+    height: 152px;
+    background-color: #f5f5f7;
+    border-top: 1px solid #D2D2D7;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+ 
+}
+
+
+.row {
+    width: 100%;
+ 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+.terms-content{
+    display: flex;
+    //padding-left: 113px;
+    
+    @media screen and (max-width: $breakpoint-tablet)  {
+        display: inline;
+    }
+}
+
+ .shipping,
+.warranty {
+  
+  
+   
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: block;
+      
+
+        footer{
+            .row {
+                background-color: gold;
+                padding-left: 0px;
+                padding-right: 0px ;
+            }
+        }
+        
+    }
+    @media screen and (max-width: $breakpoint-tablet)  {
+        
+        .subtitle {
+            display: none;
+        }
+        
+       
+    }
+  
+
+    .title {
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        color: $color-text-gray;
+    }
+}
+
+.total-content{
+ 
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+    
+
+    .colum {
+        text-align: right;
+    }
+
+    .price {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-text-gray;
+    }
+}
+
+.button {
+    margin-left: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 113px;
+    height: 56px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1e96d4;
+    color: white;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #66beeb;
+    }
+
+    &:focus,
+    &:focus-visible {
+        box-shadow: 0 0 0 2px $color-border-focus;
+    }
+}
+
+
+@media screen and (min-width: 640px) 
+{
+    footer{
+        height: 112px;
+    .row {
+       
+        padding-left: 113px;
+        padding-right: 113px 
+    }
+}
+}
+
+@media screen and (max-width: 640px) {
+    footer {
+        height: 182px;
+        .row{
+            padding-left: 0;
+            padding-right: 0px ;
+        padding-top: 23px;
+        padding-bottom: 25px;   }
+      
+    }
+    .total-content{
+        align-items: flex-end;
+        flex-direction: column;
+        padding-right: 32px;
+        padding-top: 23px;
+        padding-bottom: 25px; 
+        .colum{
+            padding-bottom: 23px;
+        }
+       
+    }
+
+    .shipping,
+.warranty {
+    .title{
+        display: none;
+    }
+}
+}
+
+

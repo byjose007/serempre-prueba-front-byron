@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+/* Border colors */
+$color-border: #eeeff2;
+$color-border-hover: #b6bcc6;
+$color-border-selected: #1e96d4;
+$color-border-focus: #d8dce0;
+
+/* Text colors */
+$color-text-gray: #6b7280;
+$color-text-black: #111111;
+
+$breakpoints: (
+    phone: 640px,
+    tablet: 768px,
+    desktop: 1024px,
+) !default;
+
+//breakpoints
+$breakpoint-phone: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
+
+@mixin h4 {
+    font-size: 19px;
+    line-height: 24px;
+    color: #111111;
+    font-weight: 500;
+}
+
+@mixin small-text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin hover-states {
+    border: 2px solid $color-border;
+    border-radius: 8px;
+
+    &:hover {
+        border: 2px solid $color-border-hover;
+    }
+
+    &:focus,
+    &:focus-visible {
+        box-shadow: 0 0 0 2px $color-border-focus;
+    }
+    &.selected {
+        border: 2px solid $color-border-selected;
+    }
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("/assets/fonts/CircularStd-Bold.woff2") format("woff2"),
+        url("/assets/fonts/CircularStd-Bold.woff") format("woff");
+
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("/assets/fonts/CircularStd-Medium.woff2") format("woff2"),
+        url("/assets/fonts/CircularStd-Medium.woff") format("woff");
+
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Circular;
+    src: url("/assets/fonts/CircularStd-Book.woff2") format("woff2"),
+        url("/assets/fonts/CircularStd-Book.woff") format("woff");
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: Circular;
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+
+        &:focus,
+        &:hover {
+            outline: none;
+        }
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: normal;
+        color: $color-text-gray;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

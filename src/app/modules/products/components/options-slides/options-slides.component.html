@@ -1,0 +1,8 @@
+<div *ngIf="optionsSlides" class="options-slides">
+  <div *ngFor="let option of optionsSlides" class="column">
+    <div class="image">
+      <img [src]="option.urlImage" />
+    </div>
+    <div class="title">{{ option.title }}</div>
+  </div>
+</div>

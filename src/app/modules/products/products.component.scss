@@ -1,0 +1,90 @@
+@import "../../../styles.scss";
+
+
+.row {
+    
+    position: relative;
+    width: 100%;
+    padding-top: 48px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 225px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .content {
+        width: 100%;
+
+    
+
+    .column-left {
+
+        // width: 100%;
+        padding-right: 16px;
+    }
+
+    .column-right {
+      
+        // width: 100%;
+       padding-left: 16px;
+    }
+}
+}
+
+.row {
+    display: flex;
+    .column-left ::ng-deep .options-slides {
+        display: none;
+    }
+    .column-right ::ng-deep .options-slides {
+        
+        flex-flow: column;
+
+        .column {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 640px) 
+{
+    .row {
+       
+        display: block;
+        padding-left: 112px;
+        padding-right: 111px
+        ;
+        
+        
+        .column-left ::ng-deep .options-slides {
+            display: flex;
+            padding-bottom: 72px;
+           
+        }
+        .column-right ::ng-deep .options-slides {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) 
+{
+    .row {
+    
+        .content{
+            display: flex;
+            
+      
+        .column-left {
+            vertical-align: top;
+            width: 50%;
+        }
+
+        .column-right {
+            vertical-align: top;
+            width: 50%;
+        }
+    }
+    }
+}

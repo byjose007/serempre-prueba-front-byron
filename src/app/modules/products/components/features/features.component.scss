@@ -1,0 +1,151 @@
+@import "../../../../../styles.scss";
+
+.product-overview {
+    .product-tag {
+        text-transform: uppercase;
+        color: #cb253c;
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        margin-bottom: 8px;
+    }
+
+    .product-title {
+        margin: 0;
+    }
+
+    .product-subtitle {
+        margin: 0;
+    }
+
+    .product-price {
+        margin-top: 45px;
+        margin-bottom: 32px;
+        &-label {
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
+        &-tag {
+            font-size: 40px;
+            line-height: 48px;
+            font-weight: bold;
+        }
+    }
+}
+.product-tabs {
+    &-titles {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+        font-size: 19px;
+        line-height: 24px;
+        color: $color-text-gray;
+
+        &.active {
+            color: $color-text-black;
+            border-bottom: 2px solid $color-text-black;
+        }
+    }
+
+    &-content {
+        display: none;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color-text-gray;
+        margin-top: 8px;
+        margin-bottom: 60px;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.product-options {
+    .category {
+        margin-bottom: 60px;
+    }
+
+    h4 {
+        @include h4;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .layout {
+        display: flex;
+
+        &.horizontal {
+            flex-flow: row;
+            .option:not(:last-child) {
+                margin-right: 16px;
+            }
+            @media screen and (max-width: 640px) {
+                flex-flow: column;
+                .option:not(:last-child){
+                    margin-right: 0px;
+                }
+            }
+        }
+
+        &.vertical {
+            flex-flow: column;
+
+        }
+    }
+
+    .option {
+        margin-bottom: 18px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        padding: 24px;
+        @include hover-states;
+    }
+
+    .text {
+        flex-grow: 1;
+    }
+
+    &-title {
+        @include small-text;
+        margin-bottom: 8px;
+    }
+    &-desc {
+        @include small-text;
+        color: $color-text-gray;
+    }
+
+    .added-price {
+        @include small-text;
+        text-align: right;
+    }
+}
+
+.product-spec {
+    .row {
+        display: flex;
+        padding: 18px 0 18px;
+        border-bottom: 1px solid $color-border;
+    }
+
+    h4 {
+        @include h4;
+        margin: 0;
+    }
+
+    .title {
+        flex-grow: 1;
+    }
+
+    .desc {
+        flex-grow: 1;
+        align-self: flex-end;
+        text-align: right;
+    }
+}

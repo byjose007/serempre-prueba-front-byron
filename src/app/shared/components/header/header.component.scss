@@ -1,0 +1,46 @@
+@import "../../../../styles.scss";
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    font-weight: 600;
+    padding-left: 112px;
+    padding-right: 110px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    @media screen and (max-width: 640px) {
+        padding-left: 16px;
+     padding-right: 16px;
+    }
+}
+
+.separator {
+    width: 100%;  
+    hr{
+        border: 0.5px solid $color-border;
+    }
+    
+
+}
+
+
+
+img {
+    width: 58px;
+    height: 58px;
+    margin: 20px 0px;
+}
+
+

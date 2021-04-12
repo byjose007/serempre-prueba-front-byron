@@ -1,0 +1,17 @@
+
+
+  <app-header></app-header>
+  <div *ngIf="products"  class="row">
+    <div class="content">
+      <div class="column-left">
+        <app-slides *ngIf="products.images"  [sliderImages]="products.images"></app-slides>
+        <app-options-slides [optionsSlides]="products.featuresImages" ></app-options-slides>
+      </div>
+      <div class="column-right">
+        <app-features   [product]="products"></app-features>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+
